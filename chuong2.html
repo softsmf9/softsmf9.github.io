@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương 2 - Computer Vision</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <!-- Thay thế bằng thẻ img thật nếu có logo -->
+                <div style="width:100px; height:100px; background:#ccc; margin: 0 auto 10px; display:flex; align-items:center; justify-content:center; font-size:0.8em; color:#555;">Logo Placeholder</div>
+                <h1 class="sidebar-title">Deep AI KhanhBlog</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search this book...">
+            </div>
+            <nav>
+                <ul>
+                    <!-- Mục cấp 1 không có tiêu đề nhóm -->
+                    <li><a href="index.html">Lời nói đầu</a></li>
+
+                    <!-- Nhóm mục cấp 1 -->
+                    <li class="nav-section-title">Giới thiệu</li>
+                    <li><a href="#">Các chương dự kiến</a></li>
+                    <li><a href="#">Mục tiêu cuốn sách</a></li>
+                    <li><a href="#">Latex</a></li>
+                    <li><a href="#">Bảng thuật ngữ</a></li>
+
+                    <!-- Nhóm mục cấp 1 khác với các mục con -->
+                    <li class="nav-section-title">Nội dung chính</li>
+                    <li>
+                        <a href="chuong1.html">1. Machine Learning Cơ Bản</a>
+                        <ul> <!-- Cấp 2 -->
+                            <li><a href="#">1.1. Giới thiệu</a></li>
+                            <li><a href="#">1.2. Hồi quy Tuyến tính</a></li>
+                            <li><a href="#">1.3. Các thuật toán khác</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="chuong2.html" class="active">2. Computer Vision</a> <!-- Active class here -->
+                        <ul> <!-- Cấp 2 -->
+                            <li><a href="#">2.1. Các bài toán cơ bản</a></li>
+                            <li><a href="#">2.2. Mạng Nơ-ron Tích chập (CNN)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">3. NLP</a></li>
+                    <li><a href="#">4. Recommender Systems</a></li>
+                    <!-- Thêm các chương khác ở đây -->
+
+                    <li class="nav-section-title">Phụ lục</li>
+                    <li><a href="#">A. Cài đặt môi trường</a></li>
+                    <li><a href="#">B. Tài liệu tham khảo</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <article>
+                <h2>Chương 2: Computer Vision</h2>
+                <p>Computer Vision (Thị giác máy tính) là một lĩnh vực liên ngành liên quan đến cách máy tính có thể được "dạy" để "nhìn" và diễn giải thế giới hình ảnh kỹ thuật số. Nó bao gồm các phương pháp thu nhận, xử lý, phân tích và hiểu hình ảnh.</p>
+
+                <h3>2.1 Các bài toán cơ bản</h3>
+                <p>Một số bài toán phổ biến trong Computer Vision bao gồm:</p>
+                <ul>
+                    <li><strong>Phân loại ảnh (Image Classification):</strong> Gán một nhãn (ví dụ: "mèo", "chó") cho toàn bộ hình ảnh.</li>
+                    <li><strong>Phát hiện đối tượng (Object Detection):</strong> Xác định vị trí (bounding box) và loại của các đối tượng trong ảnh.</li>
+                    <li><strong>Phân đoạn ảnh (Image Segmentation):</strong> Phân loại từng pixel trong ảnh thuộc về đối tượng nào (ví dụ: phân biệt đường, xe cộ, người đi bộ).
+                        <ul>
+                            <li>Phân đoạn ngữ nghĩa (Semantic Segmentation): Gán nhãn lớp cho từng pixel.</li>
+                            <li>Phân đoạn thực thể (Instance Segmentation): Phân biệt các thực thể khác nhau của cùng một lớp.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Nhận dạng khuôn mặt (Face Recognition):</strong> Xác định hoặc xác minh danh tính của một người từ ảnh hoặc video.</li>
+                    <li><strong>Ước tính tư thế (Pose Estimation):</strong> Xác định vị trí các khớp chính của cơ thể người hoặc đối tượng.</li>
+                </ul>
+
+                <h3>2.2 Mạng Nơ-ron Tích chập (Convolutional Neural Networks - CNN)</h3>
+                <p>CNN là kiến trúc Deep Learning chủ đạo được sử dụng trong hầu hết các bài toán Computer Vision hiện đại. Chúng được thiết kế đặc biệt để xử lý dữ liệu dạng lưới, chẳng hạn như hình ảnh.</p>
+                <p>Các thành phần chính của CNN bao gồm:</p>
+                <ul>
+                    <li><strong>Lớp Tích chập (Convolutional Layer):</strong> Áp dụng các bộ lọc (kernels) để trích xuất các đặc trưng cục bộ (như cạnh, góc).</li>
+                    <li><strong>Hàm Kích hoạt (Activation Function):</strong> Thường là ReLU (Rectified Linear Unit) để đưa tính phi tuyến vào mô hình.</li>
+                    <li><strong>Lớp Gộp (Pooling Layer):</strong> Giảm kích thước không gian của bản đồ đặc trưng, giúp mô hình bất biến với các thay đổi nhỏ về vị trí.</li>
+                    <li><strong>Lớp Kết nối Đầy đủ (Fully Connected Layer):</strong> Thường nằm ở cuối mạng để thực hiện phân loại dựa trên các đặc trưng đã học.</li>
+                </ul>
+                <pre><code># Ví dụ cấu trúc CNN đơn giản (minh họa bằng Keras/TensorFlow)
+# Lưu ý: Đây chỉ là mã giả để minh họa, không chạy được trực tiếp
+# vì cần cài đặt thư viện và dữ liệu.
+
+# model = Sequential([
+#     Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+#     MaxPooling2D((2, 2)),
+#     Conv2D(64, (3, 3), activation='relu'),
+#     MaxPooling2D((2, 2)),
+#     Flatten(),
+#     Dense(10, activation='softmax') # 10 lớp đầu ra
+# ])
+</code></pre>
+                <p>Chương này sẽ đi sâu vào cách hoạt động của CNN và cách áp dụng chúng vào các bài toán Computer Vision cụ thể.</p>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

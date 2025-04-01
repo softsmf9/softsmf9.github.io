@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương 1 - Machine Learning Cơ Bản</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <!-- Thay thế bằng thẻ img thật nếu có logo -->
+                <div style="width:100px; height:100px; background:#ccc; margin: 0 auto 10px; display:flex; align-items:center; justify-content:center; font-size:0.8em; color:#555;">Logo Placeholder</div>
+                <h1 class="sidebar-title">Deep AI KhanhBlog</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search this book...">
+            </div>
+            <nav>
+                <ul>
+                    <!-- Mục cấp 1 không có tiêu đề nhóm -->
+                    <li><a href="index.html">Lời nói đầu</a></li>
+
+                    <!-- Nhóm mục cấp 1 -->
+                    <li class="nav-section-title">Giới thiệu</li>
+                    <li><a href="#">Các chương dự kiến</a></li>
+                    <li><a href="#">Mục tiêu cuốn sách</a></li>
+                    <li><a href="#">Latex</a></li>
+                    <li><a href="#">Bảng thuật ngữ</a></li>
+
+                    <!-- Nhóm mục cấp 1 khác với các mục con -->
+                    <li class="nav-section-title">Nội dung chính</li>
+                    <li>
+                        <a href="chuong1.html" class="active">1. Machine Learning Cơ Bản</a> <!-- Active class here -->
+                        <ul> <!-- Cấp 2 -->
+                            <li><a href="#">1.1. Giới thiệu</a></li>
+                            <li><a href="#">1.2. Hồi quy Tuyến tính</a></li>
+                            <li><a href="#">1.3. Các thuật toán khác</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="chuong2.html">2. Computer Vision</a>
+                        <ul> <!-- Cấp 2 -->
+                            <li><a href="#">2.1. Các bài toán cơ bản</a></li>
+                            <li><a href="#">2.2. Mạng Nơ-ron Tích chập (CNN)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">3. NLP</a></li>
+                    <li><a href="#">4. Recommender Systems</a></li>
+                    <!-- Thêm các chương khác ở đây -->
+
+                    <li class="nav-section-title">Phụ lục</li>
+                    <li><a href="#">A. Cài đặt môi trường</a></li>
+                    <li><a href="#">B. Tài liệu tham khảo</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <article>
+                <h2>Chương 1: Machine Learning Cơ Bản</h2>
+                <p>Chương này giới thiệu các khái niệm và thuật toán nền tảng của Machine Learning (Học máy). Chúng ta sẽ bắt đầu với những ý tưởng cốt lõi và đi qua các mô hình đơn giản nhưng quan trọng.</p>
+
+                <h3>1.1 Giới thiệu về Machine Learning</h3>
+                <p>Machine Learning là một lĩnh vực của Trí tuệ nhân tạo (AI) tập trung vào việc phát triển các hệ thống có khả năng học hỏi từ dữ liệu mà không cần được lập trình tường minh. Thay vì viết các quy tắc cụ thể, chúng ta cung cấp dữ liệu và để thuật toán tự tìm ra các mẫu (patterns).</p>
+                <p>Có ba loại học máy chính:</p>
+                <ul>
+                    <li><strong>Học có giám sát (Supervised Learning):</strong> Học từ dữ liệu đã được gán nhãn. Ví dụ: phân loại email là spam hay không spam, dự đoán giá nhà.</li>
+                    <li><strong>Học không giám sát (Unsupervised Learning):</strong> Học từ dữ liệu không có nhãn. Ví dụ: phân cụm khách hàng, giảm chiều dữ liệu.</li>
+                    <li><strong>Học tăng cường (Reinforcement Learning):</strong> Học thông qua thử và sai, nhận phần thưởng hoặc hình phạt cho các hành động. Ví dụ: huấn luyện robot chơi game, tối ưu hóa chiến lược.</li>
+                </ul>
+
+                <h3>1.2 Hồi quy Tuyến tính (Linear Regression)</h3>
+                <p>Đây là một trong những thuật toán đơn giản nhất trong học có giám sát, được sử dụng cho các bài toán dự đoán giá trị liên tục (ví dụ: dự đoán giá nhà dựa trên diện tích).</p>
+                <p>Mô hình hồi quy tuyến tính cố gắng tìm một đường thẳng (hoặc siêu phẳng trong không gian nhiều chiều) phù hợp nhất với dữ liệu.</p>
+                <pre><code># Ví dụ mã Python với Scikit-learn
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Dữ liệu mẫu (diện tích, giá nhà)
+X = np.array([[50], [70], [100], [120]]) # Diện tích (m2)
+y = np.array([1000, 1500, 2100, 2500]) # Giá nhà (triệu VND)
+
+# Tạo và huấn luyện mô hình
+model = LinearRegression()
+model.fit(X, y)
+
+# Dự đoán giá cho nhà 80m2
+predicted_price = model.predict(np.array([[80]]))
+print(f"Giá nhà dự đoán cho 80m2: {predicted_price[0]:.2f} triệu VND")
+</code></pre>
+
+                <h3>1.3 Các thuật toán khác</h3>
+                <p>Ngoài hồi quy tuyến tính, chương này cũng có thể đề cập sơ qua về:</p>
+                <ul>
+                    <li>Hồi quy Logistic (Logistic Regression) cho bài toán phân loại nhị phân.</li>
+                    <li>Máy Vector Hỗ trợ (Support Vector Machines - SVM).</li>
+                    <li>Cây quyết định (Decision Trees) và Rừng ngẫu nhiên (Random Forests).</li>
+                </ul>
+                <p>Mục tiêu là cung cấp cái nhìn tổng quan về các phương pháp cơ bản trước khi đi sâu vào các chủ đề phức tạp hơn.</p>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend NestJS - Tài liệu FullStack</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <!-- Thay thế bằng thẻ img thật nếu có logo -->
+                <div style="width:100px; height:100px; background:#1a73e8; color:#fff; margin: 0 auto 10px; display:flex; align-items:center; justify-content:center; font-size:1.2em; border-radius:50%;">DEV</div>
+                <h1 class="sidebar-title">Tài liệu FullStack</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <nav>
+                <ul>
+                    <!-- Mục cấp 1 không có tiêu đề nhóm -->
+                    <li><a href="index.html">Trang chủ</a></li>
+
+                    <!-- Nhóm Backend -->
+                    <li class="nav-section-title">Backend - NestJS</li>
+                    <li><a href="backend.html" class="active">Tổng quan</a></li>
+                    <li>
+                        <a href="backend.html#javascript-typescript">JavaScript/TypeScript</a>
+                        <ul>
+                            <li><a href="backend.html#kien-thuc-co-ban">Kiến thức cơ bản</a></li>
+                            <li><a href="backend.html#khai-niem-nang-cao">Khái niệm nâng cao</a></li>
+                            <li><a href="backend.html#typescript">TypeScript</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="backend.html#nestjs-framework">NestJS Framework</a>
+                        <ul>
+                            <li><a href="backend.html#modules-controllers">Modules & Controllers</a></li>
+                            <li><a href="backend.html#services-dtos">Services & DTOs</a></li>
+                            <li><a href="backend.html#typeorm-database">TypeORM & Database</a></li>
+                            <li><a href="backend.html#authentication">Authentication</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="backend.html#database-typeorm">Database & TypeORM</a></li>
+
+                    <!-- Nhóm Frontend -->
+                    <li class="nav-section-title">Frontend - React</li>
+                    <li><a href="frontend.html">Tổng quan</a></li>
+                    <li>
+                        <a href="frontend.html#javascript-typescript">JavaScript & TypeScript</a>
+                        <ul>
+                            <li><a href="frontend.html#es6-typescript">ES6 & TypeScript</a></li>
+                            <li><a href="frontend.html#kieu-du-lieu-interface">Kiểu dữ liệu & Interface</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="frontend.html#react-typescript">React & TypeScript</a>
+                        <ul>
+                            <li><a href="frontend.html#components-props">Components & Props</a></li>
+                            <li><a href="frontend.html#state-hooks">State & Hooks</a></li>
+                            <li><a href="frontend.html#redux-toolkit">Redux Toolkit</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="frontend.html#ui-libraries-styling">UI Libraries & Styling</a></li>
+
+                    <!-- Nhóm QC - Tester -->
+                    <li class="nav-section-title">QC - Tester</li>
+                    <li><a href="qc-tester.html">Tổng quan</a></li>
+                    <li><a href="qc-tester.html#kien-thuc-ve-kiem-thu">Kiến thức về kiểm thử</a></li>
+                    <li><a href="qc-tester.html#cong-cu-kiem-thu">Công cụ kiểm thử</a></li>
+                    <li><a href="qc-tester.html#quy-trinh-kiem-thu">Quy trình kiểm thử</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <article>
+                <h2>Backend NestJS - Tổng quan</h2>
+
+                <p>NestJS là một framework Node.js mạnh mẽ để xây dựng các ứng dụng server-side hiệu quả, đáng tin cậy và có khả năng mở rộng. Nó được xây dựng dựa trên Express, nhưng cung cấp một cấu trúc ứng dụng tốt hơn, tận dụng TypeScript và các nguyên tắc OOP, FP, và FRP.</p>
+
+                <h3 id="javascript-typescript">JavaScript và TypeScript</h3>
+
+                <h4 id="kien-thuc-co-ban">Kiến thức cơ bản</h4>
+                <ul>
+                    <li><strong>Biến và kiểu dữ liệu</strong>: var, let, const, string, number, boolean, object, array, null, undefined</li>
+                    <li><strong>Toán tử</strong>: toán tử số học, gán, so sánh, logic, bitwise, ternary</li>
+                    <li><strong>Cấu trúc điều kiện</strong>: if...else, switch...case, try...catch</li>
+                    <li><strong>Vòng lặp</strong>: for, while, do...while, for...in, for...of</li>
+                    <li><strong>Hàm</strong>: function declarations, function expressions, arrow functions, callback functions</li>
+                    <li><strong>Xử lý lỗi</strong>: try/catch/finally, throw, Error objects</li>
+                </ul>
+
+                <h4 id="khai-niem-nang-cao">Khái niệm nâng cao</h4>
+                <ul>
+                    <li><strong>Closure</strong>: Hàm lồng nhau có thể truy cập biến của hàm bên ngoài</li>
+                    <li><strong>Scope & Context</strong>: Global scope, function scope, block scope, this keyword</li>
+                    <li><strong>OOP trong JavaScript</strong>: Prototypes, constructor functions, classes (ES6)</li>
+                    <li><strong>Module system</strong>: CommonJS, ES Modules, import/export</li>
+                    <li><strong>Asynchronous JavaScript</strong>: Callbacks, Promises, async/await</li>
+                    <li><strong>Event loop</strong>: Hiểu về single-threaded nature và non-blocking I/O</li>
+                </ul>
+
+                <h4 id="typescript">TypeScript</h4>
+                <ul>
+                    <li><strong>Kiểu dữ liệu</strong>: string, number, boolean, array, tuple, enum, any, void, ...</li>
+                    <li><strong>Interface</strong>: Định nghĩa "hợp đồng" cho đối tượng</li>
+                    <li><strong>Type</strong>: Tạo alias cho các kiểu dữ liệu</li>
+                    <li><strong>Generics</strong>: Tạo các components tái sử dụng với nhiều kiểu dữ liệu</li>
+                    <li><strong>Decorator</strong>: Annotations để thêm metadata (@Injectable, @Controller, etc.)</li>
+                    <li><strong>Utility Types</strong>: Partial, Required, Pick, Omit, ReturnType, ...</li>
+                </ul>
+
+                <h4>Công cụ phát triển</h4>
+                <ul>
+                    <li><strong>npm/yarn</strong>: Quản lý package</li>
+                    <li><strong>Git</strong>: Quản lý phiên bản</li>
+                    <li><strong>Visual Studio Code</strong>: IDE phổ biến cho JavaScript/TypeScript</li>
+                    <li><strong>ESLint & Prettier</strong>: Linting và code formatting</li>
+                    <li><strong>Postman</strong>: Kiểm thử API</li>
+                    <li><strong>Docker</strong>: Containerization</li>
+                </ul>
+
+                <h3 id="nestjs-framework">NestJS Framework</h3>
+
+                <h4>Cài đặt và cấu trúc dự án</h4>
+                <pre><code># Cài đặt Nest CLI
+npm i -g @nestjs/cli
+
+# Tạo dự án mới
+nest new project-name
+
+# Cấu trúc thư mục
+project-name/
+├── src/
+│   ├── app.controller.ts
+│   ├── app.module.ts
+│   ├── app.service.ts
+│   └── main.ts
+├── test/
+├── package.json
+└── tsconfig.json</code></pre>
+
+                <h4 id="modules-controllers">Modules</h4>
+                <p>Modules là các thành phần cốt lõi trong NestJS, giúp tổ chức ứng dụng thành các khối chức năng riêng biệt.</p>
+
+                <pre><code>// users.module.ts
+@Module({
+  imports: [DatabaseModule],
+  controllers: [UsersController],
+  providers: [UsersService],
+  exports: [UsersService],
+})
+export class UsersModule {}</code></pre>
+
+                <h4>Controllers</h4>
+                <p>Controllers xử lý các requests đến và trả về responses cho client.</p>
+
+                <pre><code>// users.controller.ts
+@Controller('users')
+export class UsersController {
+  constructor(private readonly usersService: UsersService) {}
+
+  @Get()
+  findAll(): Promise<User[]> {
+    return this.usersService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string): Promise<User> {
+    return this.usersService.findOne(+id);
+  }
+
+  @Post()
+  create(@Body() createUserDto: CreateUserDto): Promise<User> {
+    return this.usersService.create(createUserDto);
+  }
+}</code></pre>
+
+                <h4 id="services-dtos">Services</h4>
+                <p>Services chứa logic nghiệp vụ và được sử dụng bởi controllers.</p>
+
+                <pre><code>// users.service.ts
+@Injectable()
+export class UsersService {
+  constructor(
+    @InjectRepository(User)
+    private usersRepository: Repository<User>,
+  ) {}
+
+  findAll(): Promise<User[]> {
+    return this.usersRepository.find();
+  }
+
+  findOne(id: number): Promise<User> {
+    return this.usersRepository.findOne({ where: { id } });
+  }
+
+  create(createUserDto: CreateUserDto): Promise<User> {
+    const user = new User();
+    user.name = createUserDto.name;
+    user.email = createUserDto.email;
+
+    return this.usersRepository.save(user);
+  }
+}</code></pre>
+
+                <h4>DTOs (Data Transfer Objects)</h4>
+                <p>DTOs định nghĩa cấu trúc dữ liệu được truyền qua mạng.</p>
+
+                <pre><code>// create-user.dto.ts
+export class CreateUserDto {
+  @IsString()
+  @MinLength(2)
+  @MaxLength(50)
+  name: string;
+
+  @IsEmail()
+  email: string;
+
+  @IsString()
+  @MinLength(6)
+  password: string;
+}</code></pre>
+
+                <h4>Pipes</h4>
+                <p>Pipes xử lý dữ liệu trước khi đến controllers.</p>
+
+                <pre><code>// validation.pipe.ts
+@Injectable()
+export class ValidationPipe implements PipeTransform {
+  transform(value: any, metadata: ArgumentMetadata) {
+    // xử lý và validate dữ liệu
+    return value;
+  }
+}</code></pre>
+
+                <h4>Guards</h4>
+                <p>Guards quyết định liệu một request có được xử lý hay không, thường dùng cho authorization.</p>
+
+                <pre><code>// auth.guard.ts
+@Injectable()
+export class AuthGuard implements CanActivate {
+  constructor(private jwtService: JwtService) {}
+
+  canActivate(context: ExecutionContext): boolean | Promise<boolean> {
+    const request = context.switchToHttp().getRequest();
+    return this.validateRequest(request);
+  }
+
+  private validateRequest(request: any): boolean {
+    // Logic kiểm tra JWT token
+    return true;
+  }
+}</code></pre>
+
+                <h4>Interceptors</h4>
+                <p>Interceptors có thể xử lý logic trước và sau khi request được xử lý.</p>
+
+                <pre><code>// logging.interceptor.ts
+@Injectable()
+export class LoggingInterceptor implements NestInterceptor {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    const now = Date.now();
+    return next
+      .handle()
+      .pipe(
+        tap(() => console.log(`Took ${Date.now() - now}ms`)),
+      );
+  }
+}</code></pre>
+
+                <h3 id="database-typeorm">Database và TypeORM</h3>
+
+                <h4 id="typeorm-database">Kết nối cơ sở dữ liệu</h4>
+                <pre><code>// app.module.ts
+@Module({
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: 'password',
+      database: 'nestjs',
+      entities: [User, Product],
+      synchronize: true, // chỉ dùng trong development
+    }),
+    // ...
+  ],
+})
+export class AppModule {}</code></pre>
+
+                <h4>Entity</h4>
+                <p>Entities là các class TypeScript được mapping với bảng trong cơ sở dữ liệu.</p>
+
+                <pre><code>// user.entity.ts
+@Entity()
+export class User {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+
+  @Column({ unique: true })
+  email: string;
+
+  @Column()
+  password: string;
+
+  @Column({ default: true })
+  isActive: boolean;
+
+  @OneToMany(() => Order, order => order.user)
+  orders: Order[];
+}</code></pre>
+
+                <h4>Repository Pattern</h4>
+                <p>TypeORM sử dụng Repository Pattern để tương tác với cơ sở dữ liệu.</p>
+
+                <pre><code>// Trong module
+@Module({
+  imports: [TypeOrmModule.forFeature([User])],
+  // ...
+})
+
+// Trong service
+constructor(
+  @InjectRepository(User)
+  private usersRepository: Repository<User>,
+) {}</code></pre>
+
+                <h4>Migrations</h4>
+                <p>Migrations giúp quản lý thay đổi schema cơ sở dữ liệu.</p>
+
+                <pre><code># Tạo migration
+npm run typeorm migration:create -- -n UserTable
+
+# Chạy migrations
+npm run typeorm migration:run</code></pre>
+
+                <h3>Web API và REST</h3>
+
+                <h4 id="authentication">Status Codes</h4>
+                <ul>
+                    <li><strong>2xx</strong>: Success (200 OK, 201 Created, 204 No Content)</li>
+                    <li><strong>3xx</strong>: Redirection (301 Moved Permanently, 304 Not Modified)</li>
+                    <li><strong>4xx</strong>: Client Errors (400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found)</li>
+                    <li><strong>5xx</strong>: Server Errors (500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable)</li>
+                </ul>
+
+                <h4>Xử lý lỗi</h4>
+                <pre><code>// exception.filter.ts
+@Catch(HttpException)
+export class HttpExceptionFilter implements ExceptionFilter {
+  catch(exception: HttpException, host: ArgumentsHost) {
+    const ctx = host.switchToHttp();
+    const response = ctx.getResponse<Response>();
+    const request = ctx.getRequest<Request>();
+    const status = exception.getStatus();
+
+    response
+      .status(status)
+      .json({
+        statusCode: status,
+        timestamp: new Date().toISOString(),
+        path: request.url,
+        message: exception.message,
+      });
+  }
+}</code></pre>
+
+                <h4>Validation</h4>
+                <pre><code>// Cài đặt
+npm i class-validator class-transformer
+
+// main.ts
+app.useGlobalPipes(
+  new ValidationPipe({
+    whitelist: true,
+    forbidNonWhitelisted: true,
+    transform: true,
+  }),
+);</code></pre>
+
+                <h4>Xác thực và phân quyền</h4>
+                <pre><code>// auth.module.ts
+@Module({
+  imports: [
+    UsersModule,
+    PassportModule,
+    JwtModule.register({
+      secret: 'secretKey',
+      signOptions: { expiresIn: '60m' },
+    }),
+  ],
+  providers: [AuthService, JwtStrategy],
+  controllers: [AuthController],
+})
+export class AuthModule {}</code></pre>
+
+                <h4>Swagger Documentation</h4>
+                <pre><code>// main.ts
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+
+const config = new DocumentBuilder()
+  .setTitle('API Documentation')
+  .setDescription('The API description')
+  .setVersion('1.0')
+  .addBearerAuth()
+  .build();
+const document = SwaggerModule.createDocument(app, config);
+SwaggerModule.setup('api', app, document);</code></pre>
+
+                <h4>Testing</h4>
+                <pre><code>// users.service.spec.ts
+describe('UsersService', () => {
+  let service: UsersService;
+  let repository: MockType<Repository<User>>;
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [
+        UsersService,
+        {
+          provide: getRepositoryToken(User),
+          useFactory: repositoryMockFactory,
+        },
+      ],
+    }).compile();
+
+    service = module.get<UsersService>(UsersService);
+    repository = module.get(getRepositoryToken(User));
+  });
+
+  it('should be defined', () => {
+    expect(service).toBeDefined();
+  });
+
+  it('should find all users', async () => {
+    const users = [{ id: 1, name: 'Test User' }];
+    repository.find.mockReturnValue(users);
+    expect(await service.findAll()).toEqual(users);
+  });
+});</code></pre>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

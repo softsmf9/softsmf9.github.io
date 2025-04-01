@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend React - Tài liệu FullStack</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <!-- Thay thế bằng thẻ img thật nếu có logo -->
+                <div style="width:100px; height:100px; background:#1a73e8; color:#fff; margin: 0 auto 10px; display:flex; align-items:center; justify-content:center; font-size:1.2em; border-radius:50%;">DEV</div>
+                <h1 class="sidebar-title">Tài liệu FullStack</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <nav>
+                <ul>
+                    <!-- Mục cấp 1 không có tiêu đề nhóm -->
+                    <li><a href="index.html">Trang chủ</a></li>
+
+                    <!-- Nhóm Backend -->
+                    <li class="nav-section-title">Backend - NestJS</li>
+                    <li><a href="backend.html">Tổng quan</a></li>
+                    <li>
+                        <a href="backend.html#javascript-typescript">JavaScript/TypeScript</a>
+                        <ul>
+                            <li><a href="backend.html#kien-thuc-co-ban">Kiến thức cơ bản</a></li>
+                            <li><a href="backend.html#khai-niem-nang-cao">Khái niệm nâng cao</a></li>
+                            <li><a href="backend.html#typescript">TypeScript</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="backend.html#nestjs-framework">NestJS Framework</a>
+                        <ul>
+                            <li><a href="backend.html#modules-controllers">Modules & Controllers</a></li>
+                            <li><a href="backend.html#services-dtos">Services & DTOs</a></li>
+                            <li><a href="backend.html#typeorm-database">TypeORM & Database</a></li>
+                            <li><a href="backend.html#authentication">Authentication</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="backend.html#database-typeorm">Database & TypeORM</a></li>
+
+                    <!-- Nhóm Frontend -->
+                    <li class="nav-section-title">Frontend - React</li>
+                    <li><a href="frontend.html" class="active">Tổng quan</a></li>
+                    <li>
+                        <a href="frontend.html#javascript-typescript">JavaScript & TypeScript</a>
+                        <ul>
+                            <li><a href="frontend.html#es6-typescript">ES6 & TypeScript</a></li>
+                            <li><a href="frontend.html#kieu-du-lieu-interface">Kiểu dữ liệu & Interface</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="frontend.html#react-typescript">React & TypeScript</a>
+                        <ul>
+                            <li><a href="frontend.html#components-props">Components & Props</a></li>
+                            <li><a href="frontend.html#state-hooks">State & Hooks</a></li>
+                            <li><a href="frontend.html#redux-toolkit">Redux Toolkit</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="frontend.html#ui-libraries-styling">UI Libraries & Styling</a></li>
+
+                    <!-- Nhóm QC - Tester -->
+                    <li class="nav-section-title">QC - Tester</li>
+                    <li><a href="qc-tester.html">Tổng quan</a></li>
+                    <li><a href="qc-tester.html#kien-thuc-ve-kiem-thu">Kiến thức về kiểm thử</a></li>
+                    <li><a href="qc-tester.html#cong-cu-kiem-thu">Công cụ kiểm thử</a></li>
+                    <li><a href="qc-tester.html#quy-trinh-kiem-thu">Quy trình kiểm thử</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <article>
+                <h2>Frontend React - Tổng quan</h2>
+
+                <p>React là một thư viện JavaScript phổ biến để xây dựng giao diện người dùng (UI). Khi kết hợp với TypeScript, nó tạo nên một công cụ mạnh mẽ để phát triển các ứng dụng web hiện đại, có khả năng mở rộng cao và dễ bảo trì.</p>
+
+                <h3>Yêu cầu kiến thức cơ bản</h3>
+
+                <p>Trước khi bắt đầu với React, bạn cần có kiến thức cơ bản về:</p>
+
+                <h4>HTML và CSS</h4>
+                <ul>
+                    <li><strong>Cấu trúc trang web</strong>: Hiểu về HTML, DOM, cách tổ chức trang web</li>
+                    <li><strong>Semantic HTML</strong>: Sử dụng các thẻ HTML đúng với ngữ nghĩa</li>
+                    <li><strong>Styling cơ bản</strong>: Làm việc với CSS, selectors, box model</li>
+                    <li><strong>Flexbox & Grid</strong>: Tạo layout linh hoạt và responsive</li>
+                    <li><strong>Responsive Design</strong>: Thiết kế trang web hiển thị đẹp trên mọi thiết bị</li>
+                </ul>
+
+                <h4>JavaScript</h4>
+                <ul>
+                    <li><strong>Biến, kiểu dữ liệu, toán tử</strong>: Nắm vững các khái niệm cơ bản</li>
+                    <li><strong>Cấu trúc điều kiện, vòng lặp</strong>: if/else, switch, for, while, ...</li>
+                    <li><strong>DOM Manipulation</strong>: Thao tác với DOM, xử lý sự kiện</li>
+                </ul>
+
+                <h4>Quản lý mã nguồn</h4>
+                <ul>
+                    <li><strong>Git và GitLab</strong>: Quản lý phiên bản, làm việc nhóm</li>
+                </ul>
+
+                <h3 id="javascript-typescript">JavaScript và TypeScript</h3>
+
+                <h4 id="es6-typescript">JavaScript ES6</h4>
+                <p>ES6 (ECMAScript 2015) giới thiệu nhiều tính năng mới giúp code JavaScript trở nên sạch sẽ và mạnh mẽ hơn:</p>
+                <ul>
+                    <li><strong>Arrow Functions</strong>: Cú pháp ngắn gọn hơn cho hàm</li>
+                    <li><strong>Destructuring</strong>: Trích xuất dữ liệu từ mảng và đối tượng</li>
+                    <li><strong>Spread & Rest Operators</strong>: Thao tác với mảng và đối tượng linh hoạt</li>
+                    <li><strong>Template Literals</strong>: Chuỗi đa dòng và nội suy biến</li>
+                    <li><strong>Modules</strong>: Chia code thành các module có thể tái sử dụng</li>
+                    <li><strong>let & const</strong>: Khai báo biến với phạm vi block</li>
+                    <li><strong>Classes</strong>: Cú pháp OOP cho JavaScript</li>
+                    <li><strong>Promises</strong>: Xử lý bất đồng bộ</li>
+                </ul>
+
+                <h4>TypeScript</h4>
+                <p>TypeScript là một superset của JavaScript, thêm vào các tính năng kiểu tĩnh:</p>
+                <ul>
+                    <li><strong>Các kiểu dữ liệu</strong>: string, number, boolean, array, tuple, enum, any, void, ...</li>
+                    <li><strong>Interface</strong>: Định nghĩa "hợp đồng" cho đối tượng</li>
+                    <li><strong>Type</strong>: Tạo alias cho các kiểu dữ liệu</li>
+                    <li><strong>Generics</strong>: Tạo các components tái sử dụng với nhiều kiểu dữ liệu</li>
+                    <li><strong>Utility Types</strong>: Partial, Required, Pick, Omit, ReturnType, ...</li>
+                </ul>
+
+                <h4 id="kieu-du-lieu-interface">So sánh Interface và Type</h4>
+                <pre><code>// Interface
+interface User {
+  id: number;
+  name: string;
+}
+
+// Type alias
+type User = {
+  id: number;
+  name: string;
+}</code></pre>
+
+                <p>Sự khác nhau chính:</p>
+                <ul>
+                    <li>Interface có thể được mở rộng, type thì không</li>
+                    <li>Type có thể sử dụng với union, tuple, primitive types</li>
+                    <li>Interface thường được sử dụng khi định nghĩa API công khai</li>
+                </ul>
+
+                <h3 id="react-typescript">React với TypeScript</h3>
+
+                <h4>Cài đặt dự án</h4>
+                <pre><code># Sử dụng Vite để tạo dự án React + TypeScript
+npm create vite@latest my-react-app -- --template react-ts
+
+# Di chuyển vào thư mục dự án
+cd my-react-app
+
+# Cài đặt dependencies
+npm install
+
+# Chạy dự án
+npm run dev</code></pre>
+
+                <h4>React cơ bản</h4>
+                <ul>
+                    <li><strong>JSX</strong>: Cú pháp mở rộng JavaScript cho phép viết HTML trong JavaScript</li>
+                    <li><strong>Components</strong>: Function components và Class components</li>
+                    <li><strong>Props</strong>: Truyền dữ liệu từ component cha xuống component con</li>
+                    <li><strong>State</strong>: Dữ liệu nội bộ của component, thay đổi dẫn đến re-render</li>
+                    <li><strong>Component Lifecycle</strong>: Các giai đoạn trong vòng đời của component</li>
+                </ul>
+
+                <h4>React Hooks</h4>
+                <p>Hooks là các hàm cho phép bạn "hook into" trạng thái React và các tính năng lifecycle từ function components:</p>
+                <ul>
+                    <li><strong>useState</strong>: Quản lý state trong functional component</li>
+                    <li><strong>useEffect</strong>: Thực hiện side effects (data fetching, subscriptions, DOM mutations)</li>
+                    <li><strong>useContext</strong>: Sử dụng React Context trong functional component</li>
+                    <li><strong>useReducer</strong>: Quản lý state phức tạp hơn useState</li>
+                    <li><strong>useCallback</strong>: Ghi nhớ hàm giữa các lần render</li>
+                    <li><strong>useMemo</strong>: Ghi nhớ giá trị tính toán giữa các lần render</li>
+                    <li><strong>useRef</strong>: Tham chiếu đến một phần tử DOM hoặc giá trị</li>
+                </ul>
+
+                <h4 id="components-props">TypeScript với React</h4>
+                <pre><code>// Typing cho Props
+interface ButtonProps {
+  text: string;
+  onClick: () => void;
+  disabled?: boolean;
+}
+
+// Function Component với TypeScript
+const Button: React.FC&lt;ButtonProps&gt; = ({ text, onClick, disabled = false }) => {
+  return (
+    &lt;button onClick={onClick} disabled={disabled}&gt;
+      {text}
+    &lt;/button&gt;
+  );
+};</code></pre>
+
+                <pre><code>// Typing cho useState
+import React, { useState } from 'react';
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const UserProfile: React.FC = () => {
+  // Typing the state
+  const [user, setUser] = useState&lt;User | null&gt;(null);
+  const [loading, setLoading] = useState&lt;boolean&gt;(true);
+
+  // ...rest of component
+};</code></pre>
+
+                <h3>Quản lý trạng thái & Gọi API</h3>
+
+                <h4 id="state-hooks">Redux Toolkit</h4>
+                <p>Redux Toolkit là thư viện chính thức cho Redux, giúp quản lý state toàn cục:</p>
+                <ul>
+                    <li><strong>Cài đặt</strong>: <code>npm install @reduxjs/toolkit react-redux</code></li>
+                    <li><strong>Slice</strong>: Kết hợp reducers, actions và state trong một file</li>
+                    <li><strong>configureStore</strong>: Thiết lập Redux store đơn giản</li>
+                    <li><strong>createAsyncThunk</strong>: Xử lý các actions bất đồng bộ</li>
+                    <li><strong>TypeScript support</strong>: Tích hợp tốt với TypeScript</li>
+                </ul>
+
+                <h4>Gọi API</h4>
+                <p>Có hai cách phổ biến để gọi API trong React:</p>
+                <ul>
+                    <li><strong>Fetch API</strong>: API gốc của trình duyệt</li>
+                    <li><strong>Axios</strong>: Thư viện HTTP phổ biến, có tính năng phong phú hơn</li>
+                </ul>
+
+                <h4 id="redux-toolkit">React Router</h4>
+                <p>React Router là thư viện routing phổ biến cho React:</p>
+                <ul>
+                    <li><strong>Cài đặt</strong>: <code>npm install react-router-dom</code></li>
+                    <li><strong>BrowserRouter, Routes, Route</strong>: Cấu trúc routing cơ bản</li>
+                    <li><strong>Link, NavLink</strong>: Chuyển hướng giữa các trang</li>
+                    <li><strong>useParams, useNavigate, useLocation</strong>: Hooks để làm việc với routing</li>
+                    <li><strong>Nested routes</strong>: Tạo layouts lồng nhau</li>
+                    <li><strong>Lazy loading</strong>: Tải code theo nhu cầu với React.lazy và Suspense</li>
+                </ul>
+
+                <h3 id="ui-libraries-styling">UI Libraries & Styling</h3>
+
+                <h4>Ant Design (version 4)</h4>
+                <p>Ant Design là thư viện UI phổ biến cho React:</p>
+                <ul>
+                    <li><strong>Cài đặt</strong>: <code>npm install antd</code></li>
+                    <li><strong>Components</strong>: Button, Form, Table, Modal, Dropdown, ...</li>
+                    <li><strong>Layout</strong>: Grid system, Layout components</li>
+                    <li><strong>TypeScript support</strong>: Hỗ trợ tốt TypeScript</li>
+                </ul>
+
+                <h4>Styled-Components</h4>
+                <p>Styled-Components là thư viện CSS-in-JS phổ biến:</p>
+                <ul>
+                    <li><strong>Cài đặt</strong>: <code>npm install styled-components @types/styled-components</code></li>
+                    <li><strong>Định nghĩa components với styles</strong>: Viết CSS trong JavaScript</li>
+                    <li><strong>Props-based styling</strong>: Style dựa trên props</li>
+                    <li><strong>Theming</strong>: Hỗ trợ chủ đề và đổi chủ đề</li>
+                </ul>
+
+                <h4>Ví dụ React với TypeScript</h4>
+                <pre><code>// TodoList.tsx
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
+// Define interfaces
+interface Todo {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
+// Styled components
+const TodoContainer = styled.div`
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+`;
+
+const TodoItem = styled.li&lt;{ completed: boolean }&gt;`
+  padding: 10px;
+  margin: 5px 0;
+  background-color: ${props => props.completed ? '#e6f7ff' : '#fff'};
+  text-decoration: ${props => props.completed ? 'line-through' : 'none'};
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const TodoInput = styled.input`
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+`;
+
+const Button = styled.button`
+  padding: 5px 10px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1557b0;
+  }
+`;
+
+// Todo List Component
+const TodoList: React.FC = () => {
+  const [todos, setTodos] = useState&lt;Todo[]&gt;([]);
+  const [input, setInput] = useState&lt;string&gt;('');
+
+  // Add a new todo
+  const addTodo = () => {
+    if (input.trim() === '') return;
+
+    const newTodo: Todo = {
+      id: Date.now(),
+      text: input,
+      completed: false
+    };
+
+    setTodos([...todos, newTodo]);
+    setInput('');
+  };
+
+  // Toggle todo completion status
+  const toggleTodo = (id: number) => {
+    setTodos(
+      todos.map(todo =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
+  // Delete a todo
+  const deleteTodo = (id: number) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
+
+  return (
+    &lt;TodoContainer&gt;
+      &lt;h2&gt;Todo List&lt;/h2&gt;
+
+      &lt;div&gt;
+        &lt;TodoInput
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyPress={(e) => e.key === 'Enter' && addTodo()}
+          placeholder="Add a task..."
+        /&gt;
+        &lt;Button onClick={addTodo}&gt;Add&lt;/Button&gt;
+      &lt;/div&gt;
+
+      &lt;ul style={{ listStyle: 'none', padding: 0 }}&gt;
+        {todos.map((todo) => (
+          &lt;TodoItem key={todo.id} completed={todo.completed}&gt;
+            &lt;span onClick={() => toggleTodo(todo.id)}&gt;{todo.text}&lt;/span&gt;
+            &lt;Button onClick={() => deleteTodo(todo.id)}&gt;Delete&lt;/Button&gt;
+          &lt;/TodoItem&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/TodoContainer&gt;
+  );
+};
+
+export default TodoList;</code></pre>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

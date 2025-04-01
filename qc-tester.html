@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QC Tester - Tài liệu FullStack</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <!-- Thay thế bằng thẻ img thật nếu có logo -->
+                <div style="width:100px; height:100px; background:#1a73e8; color:#fff; margin: 0 auto 10px; display:flex; align-items:center; justify-content:center; font-size:1.2em; border-radius:50%;">DEV</div>
+                <h1 class="sidebar-title">Tài liệu FullStack</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <nav>
+                <ul>
+                    <!-- Mục cấp 1 không có tiêu đề nhóm -->
+                    <li><a href="index.html">Trang chủ</a></li>
+
+                    <!-- Nhóm Backend -->
+                    <li class="nav-section-title">Backend - NestJS</li>
+                    <li><a href="backend.html">Tổng quan</a></li>
+                    <li>
+                        <a href="backend.html#javascript-typescript">JavaScript/TypeScript</a>
+                        <ul>
+                            <li><a href="backend.html#kien-thuc-co-ban">Kiến thức cơ bản</a></li>
+                            <li><a href="backend.html#khai-niem-nang-cao">Khái niệm nâng cao</a></li>
+                            <li><a href="backend.html#typescript">TypeScript</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="backend.html#nestjs-framework">NestJS Framework</a>
+                        <ul>
+                            <li><a href="backend.html#modules-controllers">Modules & Controllers</a></li>
+                            <li><a href="backend.html#services-dtos">Services & DTOs</a></li>
+                            <li><a href="backend.html#typeorm-database">TypeORM & Database</a></li>
+                            <li><a href="backend.html#authentication">Authentication</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="backend.html#database-typeorm">Database & TypeORM</a></li>
+
+                    <!-- Nhóm Frontend -->
+                    <li class="nav-section-title">Frontend - React</li>
+                    <li><a href="frontend.html">Tổng quan</a></li>
+                    <li>
+                        <a href="frontend.html#javascript-typescript">JavaScript & TypeScript</a>
+                        <ul>
+                            <li><a href="frontend.html#es6-typescript">ES6 & TypeScript</a></li>
+                            <li><a href="frontend.html#kieu-du-lieu-interface">Kiểu dữ liệu & Interface</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="frontend.html#react-typescript">React & TypeScript</a>
+                        <ul>
+                            <li><a href="frontend.html#components-props">Components & Props</a></li>
+                            <li><a href="frontend.html#state-hooks">State & Hooks</a></li>
+                            <li><a href="frontend.html#redux-toolkit">Redux Toolkit</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="frontend.html#ui-libraries-styling">UI Libraries & Styling</a></li>
+
+                    <!-- Nhóm QC - Tester -->
+                    <li class="nav-section-title">QC - Tester</li>
+                    <li><a href="qc-tester.html" class="active">Tổng quan</a></li>
+                    <li><a href="qc-tester.html#kien-thuc-ve-kiem-thu">Kiến thức về kiểm thử</a></li>
+                    <li><a href="qc-tester.html#cong-cu-kiem-thu">Công cụ kiểm thử</a></li>
+                    <li><a href="qc-tester.html#quy-trinh-kiem-thu">Quy trình kiểm thử</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <article>
+                <h2>QC - Tester: Kiểm thử phần mềm</h2>
+
+                <p>Kiểm thử phần mềm là một quy trình cực kỳ quan trọng trong vòng đời phát triển phần mềm, giúp đảm bảo chất lượng sản phẩm, phát hiện lỗi sớm, và cải thiện trải nghiệm người dùng. Tài liệu này tổng hợp các kiến thức cần thiết cho một QC Tester.</p>
+
+                <h3>Kiến thức về kiểm thử</h3>
+
+                <h4>1. Các loại kiểm thử</h4>
+
+                <h5>Kiểm thử chức năng (Functional Testing)</h5>
+                <ul>
+                    <li><strong>Unit Testing</strong>: Kiểm thử từng đơn vị nhỏ nhất của phần mềm</li>
+                    <li><strong>Integration Testing</strong>: Kiểm thử tích hợp giữa các thành phần</li>
+                    <li><strong>System Testing</strong>: Kiểm thử toàn bộ hệ thống</li>
+                    <li><strong>Acceptance Testing</strong>: Kiểm thử chấp nhận (UAT - User Acceptance Testing)</li>
+                    <li><strong>Regression Testing</strong>: Kiểm thử hồi quy sau các thay đổi</li>
+                    <li><strong>Smoke Testing</strong>: Kiểm tra nhanh các chức năng chính</li>
+                    <li><strong>Sanity Testing</strong>: Kiểm tra tính hợp lý của phần mềm sau khi sửa lỗi</li>
+                </ul>
+
+                <h5>Kiểm thử phi chức năng (Non-functional Testing)</h5>
+                <ul>
+                    <li><strong>Performance Testing</strong>: Kiểm thử hiệu năng (tốc độ, phản hồi, độ ổn định)</li>
+                    <li><strong>Load Testing</strong>: Kiểm thử tải (đánh giá hệ thống dưới mức tải bình thường)</li>
+                    <li><strong>Stress Testing</strong>: Kiểm thử áp lực (hệ thống hoạt động dưới tải cực đại)</li>
+                    <li><strong>Security Testing</strong>: Kiểm thử bảo mật</li>
+                    <li><strong>Usability Testing</strong>: Kiểm thử tính khả dụng (dễ sử dụng)</li>
+                    <li><strong>Compatibility Testing</strong>: Kiểm thử tương thích (trình duyệt, thiết bị)</li>
+                    <li><strong>Localization Testing</strong>: Kiểm thử bản địa hóa</li>
+                </ul>
+
+                <h4>2. Quy trình kiểm thử</h4>
+                <ol>
+                    <li><strong>Lập kế hoạch kiểm thử</strong>: Xác định phạm vi, chiến lược, tài nguyên</li>
+                    <li><strong>Phân tích yêu cầu</strong>: Hiểu rõ các yêu cầu để xây dựng test case</li>
+                    <li><strong>Thiết kế test case</strong>: Viết các kịch bản kiểm thử chi tiết</li>
+                    <li><strong>Chuẩn bị môi trường</strong>: Thiết lập môi trường kiểm thử, dữ liệu test</li>
+                    <li><strong>Thực thi kiểm thử</strong>: Chạy các test case, ghi lại kết quả</li>
+                    <li><strong>Báo cáo lỗi</strong>: Ghi lại và báo cáo các lỗi tìm thấy</li>
+                    <li><strong>Kiểm thử lại</strong>: Kiểm tra lại sau khi lỗi được sửa</li>
+                    <li><strong>Báo cáo kết quả</strong>: Tổng hợp kết quả kiểm thử</li>
+                </ol>
+
+                <h4>3. Phương pháp kiểm thử</h4>
+                <ul>
+                    <li><strong>Black Box Testing</strong>: Kiểm thử không biết cấu trúc bên trong</li>
+                    <li><strong>White Box Testing</strong>: Kiểm thử biết cấu trúc bên trong</li>
+                    <li><strong>Gray Box Testing</strong>: Kết hợp cả hai cách trên</li>
+                    <li><strong>Static Testing</strong>: Kiểm thử không chạy code (review code, tài liệu)</li>
+                    <li><strong>Dynamic Testing</strong>: Kiểm thử khi chạy code</li>
+                    <li><strong>Manual Testing</strong>: Kiểm thử thủ công</li>
+                    <li><strong>Automated Testing</strong>: Kiểm thử tự động</li>
+                </ul>
+
+                <h3>Công cụ kiểm thử</h3>
+
+                <h4>1. Công cụ quản lý test case</h4>
+                <ul>
+                    <li><strong>TestRail</strong>: Quản lý test case, lập kế hoạch test, báo cáo</li>
+                    <li><strong>JIRA + Xray</strong>: Plugin quản lý test cho JIRA</li>
+                    <li><strong>qTest</strong>: Nền tảng quản lý test case toàn diện</li>
+                    <li><strong>Zephyr</strong>: Công cụ quản lý test cho JIRA</li>
+                </ul>
+
+                <h4>2. Công cụ quản lý lỗi (Bug tracking)</h4>
+                <ul>
+                    <li><strong>JIRA</strong>: Quản lý dự án và theo dõi lỗi phổ biến</li>
+                    <li><strong>Bugzilla</strong>: Hệ thống theo dõi lỗi mã nguồn mở</li>
+                    <li><strong>Mantis</strong>: Hệ thống quản lý lỗi web-based</li>
+                    <li><strong>Trello</strong>: Bảng Kanban đơn giản cho quản lý lỗi</li>
+                </ul>
+
+                <h4>3. Công cụ kiểm thử API</h4>
+                <ul>
+                    <li><strong>Postman</strong>: Công cụ kiểm thử API phổ biến</li>
+                    <li><strong>SoapUI</strong>: Kiểm thử SOAP và REST API</li>
+                    <li><strong>JMeter</strong>: Kiểm thử hiệu năng và tải cho API</li>
+                    <li><strong>REST Assured</strong>: Thư viện Java để kiểm thử RESTful API</li>
+                </ul>
+
+                <h4>4. Công cụ kiểm thử tự động</h4>
+                <ul>
+                    <li><strong>Selenium</strong>: Tự động hóa trình duyệt web</li>
+                    <li><strong>Cypress</strong>: End-to-end testing cho ứng dụng web hiện đại</li>
+                    <li><strong>Appium</strong>: Kiểm thử tự động cho mobile app</li>
+                    <li><strong>WebdriverIO</strong>: Framework kiểm thử tự động dựa trên NodeJS</li>
+                    <li><strong>Playwright</strong>: Kiểm thử tự động đa trình duyệt từ Microsoft</li>
+                </ul>
+
+                <h4>5. Công cụ kiểm thử hiệu năng</h4>
+                <ul>
+                    <li><strong>JMeter</strong>: Công cụ mã nguồn mở cho performance testing</li>
+                    <li><strong>LoadRunner</strong>: Giải pháp kiểm thử hiệu năng enterprise</li>
+                    <li><strong>Gatling</strong>: Công cụ kiểm thử tải mã nguồn mở dựa trên Scala</li>
+                    <li><strong>k6</strong>: Công cụ kiểm thử hiệu năng hiện đại</li>
+                </ul>
+
+                <h4>6. Công cụ kiểm thử bảo mật</h4>
+                <ul>
+                    <li><strong>OWASP ZAP</strong>: Scanner bảo mật web mã nguồn mở</li>
+                    <li><strong>Burp Suite</strong>: Nền tảng kiểm thử bảo mật web</li>
+                    <li><strong>Nessus</strong>: Scanner lỗ hổng bảo mật</li>
+                    <li><strong>Acunetix</strong>: Scanner lỗ hổng ứng dụng web tự động</li>
+                </ul>
+
+                <h3>Kỹ năng mềm quan trọng</h3>
+
+                <ul>
+                    <li><strong>Kỹ năng giao tiếp</strong>: Trình bày rõ ràng, báo cáo lỗi chi tiết</li>
+                    <li><strong>Tư duy phân tích</strong>: Phân tích vấn đề, tìm nguyên nhân gốc rễ</li>
+                    <li><strong>Tư duy sáng tạo</strong>: Tìm các kịch bản kiểm thử khác nhau</li>
+                    <li><strong>Tổ chức và quản lý thời gian</strong>: Sắp xếp công việc hiệu quả</li>
+                    <li><strong>Kỹ năng làm việc nhóm</strong>: Phối hợp với dev, PM, và stakeholders</li>
+                    <li><strong>Tỉ mỉ và cẩn thận</strong>: Chú ý đến từng chi tiết nhỏ</li>
+                    <li><strong>Kiên nhẫn</strong>: Thực hiện test case lặp đi lặp lại</li>
+                    <li><strong>Linh hoạt</strong>: Thích nghi với thay đổi yêu cầu</li>
+                </ul>
+
+                <h3>Ví dụ Test Case</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Test Case ID</th>
+                            <th>TC001</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Test Case Name</td>
+                            <td>Kiểm tra đăng nhập với thông tin hợp lệ</td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td>Kiểm tra chức năng đăng nhập với username và password hợp lệ</td>
+                        </tr>
+                        <tr>
+                            <td>Preconditions</td>
+                            <td>
+                                1. Ứng dụng đã được cài đặt<br>
+                                2. Tài khoản người dùng đã tồn tại trong hệ thống
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Test Steps</td>
+                            <td>
+                                1. Mở ứng dụng<br>
+                                2. Nhấp vào nút "Đăng nhập"<br>
+                                3. Nhập username hợp lệ<br>
+                                4. Nhập password hợp lệ<br>
+                                5. Nhấp vào nút "Submit"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Expected Results</td>
+                            <td>
+                                1. Người dùng đăng nhập thành công<br>
+                                2. Hiển thị trang chủ<br>
+                                3. Hiển thị thông báo "Đăng nhập thành công"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Actual Results</td>
+                            <td>[Kết quả thực tế sau khi thực hiện test]</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Pass/Fail</td>
+                        </tr>
+                        <tr>
+                            <td>Comments</td>
+                            <td>[Ghi chú bổ sung nếu cần]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Ví dụ Bug Report</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bug ID</th>
+                            <th>BUG001</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Summary</td>
+                            <td>Nút "Đăng nhập" không phản hồi khi nhấp chuột</td>
+                        </tr>
+                        <tr>
+                            <td>Priority</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>Severity</td>
+                            <td>Critical</td>
+                        </tr>
+                        <tr>
+                            <td>Environment</td>
+                            <td>
+                                Browser: Chrome 115.0.5790.171<br>
+                                OS: Windows 11<br>
+                                Screen resolution: 1920x1080
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Steps to Reproduce</td>
+                            <td>
+                                1. Mở trang đăng nhập<br>
+                                2. Nhập username và password hợp lệ<br>
+                                3. Nhấp vào nút "Đăng nhập"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Expected Results</td>
+                            <td>Hệ thống đăng nhập thành công và chuyển đến trang chủ</td>
+                        </tr>
+                        <tr>
+                            <td>Actual Results</td>
+                            <td>Không có phản hồi khi nhấp vào nút "Đăng nhập"</td>
+                        </tr>
+                        <tr>
+                            <td>Attachments</td>
+                            <td>[Link đến screenshot/video ghi lại lỗi]</td>
+                        </tr>
+                        <tr>
+                            <td>Assigned To</td>
+                            <td>Developer A</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Tự động hóa kiểm thử với Cypress</h3>
+
+                <p>Cypress là một công cụ kiểm thử tự động hiện đại cho các ứng dụng web. Dưới đây là ví dụ đơn giản về kiểm thử đăng nhập sử dụng Cypress:</p>
+
+                <pre><code>// cypress/integration/login.spec.js
+describe('Login Feature', () => {
+  beforeEach(() => {
+    // Truy cập trang đăng nhập trước mỗi test
+    cy.visit('/login');
+  });
+
+  it('should login successfully with valid credentials', () => {
+    // Nhập thông tin đăng nhập
+    cy.get('#username').type('testuser');
+    cy.get('#password').type('password123');
+
+    // Nhấp vào nút đăng nhập
+    cy.get('#login-button').click();
+
+    // Kiểm tra đã chuyển đến trang chủ
+    cy.url().should('include', '/dashboard');
+
+    // Kiểm tra thông báo thành công
+    cy.get('.success-message').should('contain', 'Đăng nhập thành công');
+
+    // Kiểm tra tên người dùng hiển thị
+    cy.get('.user-info').should('contain', 'testuser');
+  });
+
+  it('should show error with invalid credentials', () => {
+    // Nhập thông tin đăng nhập không hợp lệ
+    cy.get('#username').type('wronguser');
+    cy.get('#password').type('wrongpass');
+
+    // Nhấp vào nút đăng nhập
+    cy.get('#login-button').click();
+
+    // Kiểm tra thông báo lỗi
+    cy.get('.error-message').should('be.visible');
+    cy.get('.error-message').should('contain', 'Tên đăng nhập hoặc mật khẩu không đúng');
+
+    // Kiểm tra URL vẫn ở trang đăng nhập
+    cy.url().should('include', '/login');
+  });
+});</code></pre>
+
+                <h3>Kiểm thử API với Postman</h3>
+
+                <p>Postman là công cụ phổ biến để kiểm thử API. Dưới đây là ví dụ kiểm thử một API đơn giản:</p>
+
+                <h4>Ví dụ kiểm thử Login API</h4>
+
+                <ol>
+                    <li>
+                        <strong>Tạo request POST:</strong>
+                        <ul>
+                            <li>URL: https://api.example.com/auth/login</li>
+                            <li>Method: POST</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Thêm Headers:</strong>
+                        <ul>
+                            <li>Content-Type: application/json</li>
+                            <li>Accept: application/json</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Thêm Body (raw JSON):</strong>
+                        <pre><code>{
+  "username": "testuser",
+  "password": "password123"
+}</code></pre>
+                    </li>
+                    <li>
+                        <strong>Viết Tests (trong tab Tests):</strong>
+                        <pre><code>// Kiểm tra status code
+pm.test("Status code is 200", function () {
+  pm.response.to.have.status(200);
+});
+
+// Kiểm tra response có chứa token
+pm.test("Response includes auth token", function () {
+  var jsonData = pm.response.json();
+  pm.expect(jsonData).to.have.property('token');
+});
+
+// Kiểm tra response time dưới 500ms
+pm.test("Response time is less than 500ms", function () {
+  pm.expect(pm.response.responseTime).to.be.below(500);
+});
+
+// Lưu token để sử dụng cho các request sau
+if (pm.response.code === 200) {
+  var jsonData = pm.response.json();
+  pm.environment.set("authToken", jsonData.token);
+}</code></pre>
+                    </li>
+                </ol>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
