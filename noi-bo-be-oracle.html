@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội Bộ BE Oracle - Tài liệu FullStack</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <!-- Thay thế bằng thẻ img thật nếu có logo -->
+                <div style="width:100px; height:100px; background:#1a73e8; color:#fff; margin: 0 auto 10px; display:flex; align-items:center; justify-content:center; font-size:1.2em; border-radius:50%;">DEV</div>
+                <h1 class="sidebar-title">Tài liệu FullStack</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+
+                    <!-- Nhóm Backend -->
+                    <li class="nav-section-title">Backend - NestJS</li>
+                    <li><a href="backend.html">Tổng quan</a></li>
+                    <li><a href="backend.html#javascript-typescript">JavaScript/TypeScript</a></li>
+                    <li><a href="backend.html#nestjs-framework">NestJS Framework</a></li>
+                    <li><a href="backend.html#database-typeorm">Database & TypeORM</a></li>
+
+                    <!-- Nhóm Frontend -->
+                    <li class="nav-section-title">Frontend - React</li>
+                    <li><a href="frontend.html">Tổng quan</a></li>
+                    <li><a href="frontend.html#javascript-typescript">JavaScript & TypeScript</a></li>
+                    <li><a href="frontend.html#react-typescript">React & TypeScript</a></li>
+                    <li><a href="frontend.html#ui-libraries-styling">UI Libraries & Styling</a></li>
+
+                    <!-- Nhóm QC - Tester -->
+                    <li class="nav-section-title">QC - Tester</li>
+                    <li><a href="qc-tester.html">Tổng quan</a></li>
+                    <li><a href="qc-tester.html#kien-thuc-ve-kiem-thu">Kiến thức về kiểm thử</a></li>
+                    <li><a href="qc-tester.html#cong-cu-kiem-thu">Công cụ kiểm thử</a></li>
+                    <li><a href="qc-tester.html#quy-trinh-kiem-thu">Quy trình kiểm thử</a></li>
+
+                    <!-- Nhóm Nội Bộ -->
+                    <li class="nav-section-title">Nội Bộ</li>
+                    <li><a href="noi-bo-fe-nodejs.html">FE - NodeJS</a></li>
+                    <li><a href="noi-bo-be-oracle.html" class="active">BE - Oracle</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <article>
+                <h2>Nội Bộ - BE - ORACLE</h2>
+
+                <h3 id="kien-thuc-tong-quan">Kiến thức tổng quan</h3>
+                <ul>
+                    <li>Cài đặt môi trường
+                        <ul>
+                            <li>Oralce Client 19c</li>
+                            <li>SQL Navigator 7.6</li>
+                        </ul>
+                    </li>
+                    <li>Kết nối Database Oracle</li>
+                </ul>
+
+                <h3 id="kien-thuc-csdl">Kiến thức về cơ sở dữ liệu</h3>
+                <ul>
+                    <li>Table, Index, View, Trigger, Sequence</li>
+                    <li>Quản lý User & Role</li>
+                    <li>Transaction Control (COMMIT, ROLLBACK, SAVEPOINT)</li>
+                    <li>Procedure</li>
+                    <li>Function</li>
+                    <li>Package</li>
+                    <li>DBMS_SCHEDULER</li>
+                    <li>Kiểu dữ liệu trong Oracle</li>
+                    <li>Các lệnh cơ bản: SELECT, INSERT, UPDATE, DELETE, DROP</li>
+                    <li>Mệnh đề: WHERE, GROUP BY, HAVING, CASE WHEN, IF ELSE, FOR LOOP, WHILE, PIVOT</li>
+                    <li>Hàm tổng hợp: COUNT(), SUM(), AVG(), MAX(), MIN(), RANK()</li>
+                    <li>Hàm xử lý chuỗi: UPPER(), LOWER(), SUBSTR()</li>
+                    <li>Hàm xử lý số: ROUND(), CEIL(), FLOOR()</li>
+                    <li>Hàm xử lý ngày tháng: SYSDATE, ADD_MONTHS(), TRUNC(DATE)</li>
+                    <li>Exception Handling</li>
+                </ul>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
