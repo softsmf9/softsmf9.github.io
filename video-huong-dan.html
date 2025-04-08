@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Hướng Dẫn Javascript & Frameworks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add specific styles for video list if needed, or integrate into style.css -->
+    <style>
+        /* Styles moved from original video-huong-dan.html, potentially merge into style.css */
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+        .course-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .course-item img {
+            width: 100px; /* Fixed width */
+            height: 60px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensure image covers the area */
+            margin-right: 15px;
+            border-radius: 4px;
+            background-color: #eee; /* Background for placeholder */
+        }
+        .course-item a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+         .course-item a:hover {
+             text-decoration: underline;
+         }
+        .course-details {
+            flex-grow: 1;
+        }
+        /* Ensure main content area has appropriate styling if needed */
+        .content article {
+             background-color: #fff;
+             padding: 20px;
+             border-radius: 8px;
+             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div style="width:100px; height:100px; background:#1a73e8; color:#fff; margin: 0 auto 10px; display:flex; align-items:center; justify-content:center; font-size:1.2em; border-radius:50%;">DEV</div>
+                <h1 class="sidebar-title">Tài liệu FullStack</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+
+                    <!-- Nhóm Backend -->
+                    <li class="nav-section-title">Backend - NestJS</li>
+                    <li><a href="backend.html">Tổng quan</a></li>
+                    <li><a href="backend.html#javascript-typescript">JavaScript/TypeScript</a></li>
+                    <li><a href="backend.html#nestjs-framework">NestJS Framework</a></li>
+                    <li><a href="backend.html#database-typeorm">Database & TypeORM</a></li>
+
+                    <!-- Nhóm Frontend -->
+                    <li class="nav-section-title">Frontend - React</li>
+                    <li><a href="frontend.html">Tổng quan</a></li>
+                    <li><a href="frontend.html#javascript-typescript">JavaScript & TypeScript</a></li>
+                    <li><a href="frontend.html#react-typescript">React & TypeScript</a></li>
+                    <li><a href="frontend.html#ui-libraries-styling">UI Libraries & Styling</a></li>
+
+                    <!-- Nhóm QC - Tester -->
+                    <li class="nav-section-title">QC - Tester</li>
+                    <li><a href="qc-tester.html">Tổng quan</a></li>
+                    <li><a href="qc-tester.html#kien-thuc-ve-kiem-thu">Kiến thức về kiểm thử</a></li>
+                    <li><a href="qc-tester.html#cong-cu-kiem-thu">Công cụ kiểm thử</a></li>
+                    <li><a href="qc-tester.html#quy-trinh-kiem-thu">Quy trình kiểm thử</a></li>
+
+                    <!-- Nhóm Nội Bộ -->
+                    <li class="nav-section-title">Nội Bộ</li>
+                    <li><a href="noi-bo-fe-nodejs.html">FE - NodeJS</a></li>
+                    <li><a href="noi-bo-be-oracle.html">BE - Oracle</a></li>
+
+                    <!-- Nhóm Video Hướng Dẫn -->
+                    <li class="nav-section-title">Video Hướng Dẫn</li>
+                    <li><a href="video-huong-dan.html" class="active">Javascript & Frameworks</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <article>
+                <h2>Video Hướng Dẫn Javascript & Frameworks</h2>
+                <ul class="course-list">
+                    <li class="course-item">
+                        <img src="https://i.ytimg.com/vi/0SJE9dYdpps/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9_V8VYvF6j2QpZz-4Y8Q8Zz-Q8A" alt="Javascript Cơ bản Thumbnail">
+                        <div class="course-details">
+                            <a href="https://fullstack.edu.vn/learning/javascript-co-ban" target="_blank">Javascript Cơ bản (F8)</a>
+                        </div>
+                    </li>
+                    <li class="course-item">
+                        <img src="https://nestjs.com/img/logo-small.svg" alt="NestJS Thumbnail">
+                        <div class="course-details">
+                            <a href="https://drive.google.com/drive/folders/1H_VPq9PVqyMfLrSjNXuqTMyySZ-SsDSr?usp=sharing" target="_blank">NestJS (Google Drive)</a>
+                        </div>
+                    </li>
+                    <li class="course-item">
+                        <img src="https://i.ytimg.com/vi/x0fSBAgBrOQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLApDI9v0hrF06lAR9t0hJBC0fn-PA" alt="ReactJS Thumbnail">
+                        <div class="course-details">
+                            <a href="https://fullstack.edu.vn/courses/reactjs" target="_blank">ReactJS (F8)</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Removed the back-link as navigation is now in the sidebar -->
+            </article>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
